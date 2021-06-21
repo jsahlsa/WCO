@@ -16,6 +16,7 @@ function findZipCode(e) {
 
 
 
+
     const zipRegex = /(^\d{5}$)/;
     let value = input.value;
     console.log(array);
@@ -36,10 +37,25 @@ function findZipCode(e) {
                 }
             );
         } else {
+            para.style.fontSize = '5em';
             para.textContent = "👎";
+            para.animate(
+                [
+                    // keyframes
+                    { transform: "scale(1.2)" },
+                    { transform: "scale(1)" }
+
+                ],
+                {
+                    // timing options
+                    duration: 500,
+                    iterations: 1
+                }
+            );
         }
     } else {
         para.style.fontSize = "16px";
+
         para.textContent = "Please Enter 5 digit Zip code";
     }
 
