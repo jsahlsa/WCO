@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.page-wrapper {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: 1fr 200px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 20%;
+}
+
+p {
+  height: 200px;
+  margin-top: 50px;
+}
+
+img {
+  width: 400px;
+}
+
+form {
+  display: grid;
+  grid-gap: 10px;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+input {
+  padding: 0.5em;
+  font-size: 1.2em;
+}
+
+p {
+  font-size: 5em;
+  text-align: center;
+  margin: 0;
+}
+
+button {
+  border: none;
+  background: #0078b4;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.5rem 2rem;
+  font-size: 1.5em;
+  font-weight: 700;
+  font-family: "Roboto";
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+button:hover {
+  background: #0078b4cc;
+}
+
+button:active {
+  transform: translateY(2px);
+}
