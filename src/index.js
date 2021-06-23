@@ -6,6 +6,7 @@ import 'regenerator-runtime/runtime';
 const form = document.querySelector("form");
 const input = document.querySelector("#zip");
 const para = document.querySelector("p");
+const btn = document.querySelector('button');
 
 console.log(input.value);
 
@@ -23,17 +24,22 @@ function findZipCode(e) {
     if (zipRegex.test(value)) {
         if (array.indexOf(value) !== -1) {
             para.textContent = "👍";
+            para.style.fontSize = '5em';
+
             para.animate(
                 [
                     // keyframes
+                    { transform: "scale(1)" },
                     { transform: "scale(1.2)" },
                     { transform: "scale(1)" },
-                    { transform: "scale(1.2)" }
+                    { transform: "scale(1.2)" },
+                    { transform: "scale(1)" }
                 ],
                 {
                     // timing options
+                    direction: 'alternate',
                     duration: 900,
-                    iterations: Infinity
+                    iterations: 2
                 }
             );
         } else {
@@ -55,7 +61,7 @@ function findZipCode(e) {
         }
     } else {
         para.style.fontSize = "16px";
-
+        btn.style.marginBottom = '1em';
         para.textContent = "Please Enter 5 digit Zip code";
     }
 
